@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Guessing Game</h1>
+        <div id="game-info">
+            <p>Session ID: <span id="session-id"></span></p>
+            <p>Players Connected: <span id="players-count">0</span></p>
+        </div>
+        <div id="chat-box"></div>
+        <input type="text" id="message" placeholder="Enter your guess...">
+        <button id="send">Send</button>
+    </div>
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
