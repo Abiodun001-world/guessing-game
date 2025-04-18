@@ -7,4 +7,4 @@ router.post('/create', gameController.CreateGame);
 router.get('/:sessionId', gameController.SessionId);
 
 module.exports = router;
-
+ 
