@@ -1,13 +1,14 @@
-const { Schema, model } = require('mongoose');
+const mongoose = require('mongoose');
 
-const GameSessionSchema = new Schema({
+const GameSessionSchema = new mongoose.Schema({
+    _id: { type: String, required: true },
     gameMaster: String,
-    players: [String],
+    players: String,
     question: String,
     answer: String,
     scores: { type: Map, of: Number },
     isActive: Boolean,
-    createdAt: { type: Date, default: Date.now }
+    timestamp: { type: Date, default: Date.now },
 });
 
-module.exports = model('GameSession', GameSessionSchema);
+module.exports = mongoose.model('GameSession', GameSessionSchema);
